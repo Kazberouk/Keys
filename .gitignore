@@ -1,0 +1,13 @@
+*.ilk
+*.lastbuildstate
+unsuccessfulbuild
+*.recipe
+*.log
+*.user
+*.filters
+*.pdb
+*.db
+*.obj
+*.suo
+*.pch
+*.idb

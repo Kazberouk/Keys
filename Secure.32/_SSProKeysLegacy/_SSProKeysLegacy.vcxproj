@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{2045C42F-A6E5-431A-AC23-F3BF5E87A58F}</ProjectGuid>
+    <ProjectName>_SSProKeysLegacy</ProjectName>
+  </PropertyGroup>
+  <Import Project="..\..\Modules.32\Common\Project\CommonProjectCPP.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="..\..\Modules.32\Common\Project\CommonProjectTargetExe.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\..\Modules.32\Common\Project\CommonProject.props" />
+    <Import Project="..\..\Modules.32\Common\Project\Common.include.props" />
+    <Import Project="..\..\Modules.32\Common\Project\Resshare.32.include.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\Modules.32\$(Configuration).Exe\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\Modules.32\$(Configuration).Exe\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>../../Modules.32/Release.lib/CmnUtils.lib;../../Modules.32/Release.lib/ProUtilsHelper.lib;../../Release.lib/starlingpro.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)..\Modules.32\Resshare.32;$(OutDir)..\Modules.32\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalDependencies>../../Modules.32/Debug.lib/CmnUtils.lib;../../Debug.lib/starlingpro.lib;../../Modules.32/Debug.lib/ProUtilsHelper.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)..\Modules.32\Resshare.32;$(OutDir)..\Modules.32\Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\changeinfo.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\connection.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\CryptographyHelper.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\LibraryLTMInfoImpl.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\promain.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\ProObjEnum.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\PropertiesImpl.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\RegScreenManager.cpp" />
+    <ClCompile Include="..\..\Modules.32\Resshare.32\ProCom.Src\StringPropertiesImpl.cpp" />
+    <ClCompile Include="..\..\Resshare.32\PROCOM.SRC\BaseLoggingOffSupport.cpp" />
+    <ClCompile Include="..\..\Resshare.32\PROCOM.SRC\BaseRegScreenManager.cpp" />
+    <ClCompile Include="..\..\Resshare.32\PROCOM.SRC\FipBFPath.cpp" />
+    <ClCompile Include="SSPro60.cpp" />
+    <ClCompile Include="SSPro60Dlg.cpp" />
+    <ClCompile Include="SSProMain.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SSPro60.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\changeinfo.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\CONNECTION.H" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\CryptographyHelper.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\LibraryLTMInfoImpl.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\promain.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\ProObjEnum.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\PropertiesImpl.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\RegScreenManager.h" />
+    <ClInclude Include="..\..\Modules.32\Resshare.32\ProCom.Src\StringPropertiesImpl.h" />
+    <ClInclude Include="..\..\Resshare.32\PROCOM.SRC\BaseLoggingOffSupport.h" />
+    <ClInclude Include="..\..\Resshare.32\PROCOM.SRC\BaseRegScreenManager.h" />
+    <ClInclude Include="..\..\Resshare.32\PROCOM.SRC\FipBFPath.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SSPro60.h" />
+    <ClInclude Include="SSPro60Dlg.h" />
+    <ClInclude Include="SSProMain.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\SSPro60.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\SSPro60.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="SSPro60.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

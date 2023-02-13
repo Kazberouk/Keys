@@ -1,0 +1,277 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SSPro60.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SSPro60.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 187, 97
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SSPro60"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SSPro60 Version 2.1",IDC_STATIC,40,10,80,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003",IDC_STATIC,40,25,80,8
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14,WS_GROUP
+    LTEXT           "Write password",IDC_STATIC,33,48,70,8
+    EDITTEXT        IDC_WRITE_PAS,114,45,61,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Overwrite password 1",IDC_STATIC,33,62,70,8
+    EDITTEXT        IDC_OVERWRITE_PAS1,114,60,61,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Overwrite password 2",IDC_STATIC,33,76,70,8
+    EDITTEXT        IDC_OVERWRITE_PAS2,114,75,61,12,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_SSPRO60_DIALOG DIALOGEX 0, 0, 283, 313
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SSPro6.0 Key Generator"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Key Number:",IDC_STATIC,9,5,42,10
+    EDITTEXT        IDC_KEY_NUMBER,53,3,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Increase Key Number",IDC_INCREASE_KEY_NUMBER,111,1,80,14
+    PUSHBUTTON      "Make Key",IDC_MAKE_KEY,199,1,80,14
+    LTEXT           "Key Name",IDC_STATIC,9,19,42,10
+    EDITTEXT        IDC_KEY_NAME,53,17,225,12,ES_AUTOHSCROLL
+    LTEXT           "Expiration Date:",IDC_STATIC,9,34,63,10
+    CONTROL         "DateTimePicker1",IDC_EXP_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHORTDATECENTURYFORMAT | WS_TABSTOP,76,32,65,12
+    COMBOBOX        IDC_EXP_COMBO,143,32,41,53,CBS_DROPDOWNLIST | CBS_SORT | WS_TABSTOP
+    EDITTEXT        IDC_RUNS_COUNT,188,33,26,12,ES_AUTOHSCROLL
+    LTEXT           "Runs",IDC_STATIC,217,35,18,10
+    LTEXT           "License Paid Date:",IDC_STATIC,9,48,63,10
+    CONTROL         "DateTimePicker1",IDC_PAID_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHORTDATECENTURYFORMAT | WS_TABSTOP,76,46,65,12
+    LTEXT           "Date of Burn:",IDC_STATIC,9,62,63,10
+    CONTROL         "DateTimePicker1",IDC_BURN_DATE,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_SHORTDATECENTURYFORMAT | WS_TABSTOP,76,60,65,12
+    CONTROL         "Set Current Date",IDC_SET_CURRENT_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,62,80,8
+    LTEXT           "Key Version:",IDC_STATIC,9,76,45,10
+    EDITTEXT        IDC_VERSION_NUMBER,76,74,65,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Set Current Version",IDC_SET_CURRENT_VERSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,76,86,8
+    GROUPBOX        "",IDC_STATIC,3,93,134,116
+    CONTROL         "All the Options Below",IDC_ALL_FPM,"Button",BS_AUTO3STATE | BS_PUSHLIKE | WS_TABSTOP,7,91,125,13
+    GROUPBOX        "",IDC_STATIC,141,93,134,106
+    CONTROL         "All the Options Below",IDC_ALL_FIP,"Button",BS_AUTO3STATE | BS_PUSHLIKE | WS_TABSTOP,145,91,125,13
+    CONTROL         "FIELDPRO Modules",IDC_FPM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,108,79,8
+    CONTROL         "FRAC",IDC_FRACPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,118,79,8
+    CONTROL         "STIMPRO",IDC_STIMPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,128,79,8
+    CONTROL         "CEMENTPRO",IDC_CEMENTPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,138,79,8
+    CONTROL         "RESPRO",IDC_RESPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,148,79,8
+    CONTROL         "REALPRO",IDC_REALPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,158,79,8
+    CONTROL         "TOOLPRO",IDC_TOOLPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,168,79,8
+    CONTROL         "MAXPRO",IDC_MAXPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,178,79,8
+    CONTROL         "WTPA",IDC_WTPA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,188,79,8
+    CONTROL         "STIM RAW Data",IDC_STIM_RAW_DATA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,198,79,8
+    CONTROL         "FIELDPRO System Environment ",IDC_FIELDPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,108,122,8
+    CONTROL         "FLOPRO",IDC_PORPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,118,117,8
+    CONTROL         "ECOPRO ",IDC_ECOPRO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,128,117,8
+    CONTROL         "GRADIENT",IDC_GRADIENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,138,117,8
+    CONTROL         "GEOPRO",IDC_GEO_OP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,148,117,8
+    CONTROL         "LOGPRO",IDC_REGISTERED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,158,117,8
+    CONTROL         "TRANSPRO",IDC_MIGRATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,168,117,8
+    CONTROL         "eFIELDPRO",IDC_4PHI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,178,117,8
+    CONTROL         "COST",IDC_COST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,188,117,8
+    CONTROL         "Allow Virtual Machine",IDC_FIELDPRO_VM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,200,117,8
+    PUSHBUTTON      "Load Key File",IDC_LOAD_KEY_FILE,5,210,59,14
+    PUSHBUTTON      "Make Key File",IDC_MAKE_KEY_FILE,66,210,64,14
+    PUSHBUTTON      "Get Info",IDC_GETINFO,132,210,55,14
+    PUSHBUTTON      "Load Log",IDC_LOAD_LOG,189,210,50,14
+    COMBOBOX        IDC_COMBO_LOADED_KEY,241,211,37,246,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Close",IDCANCEL,231,298,50,14
+    EDITTEXT        IDC_KEY_LIST,3,226,277,70,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATUS,3,299,228,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,0,1
+ PRODUCTVERSION 2,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "RES"
+            VALUE "FileDescription", "SSPro60 MFC Application"
+            VALUE "FileVersion", "2, 1, 0, 1"
+            VALUE "InternalName", "SSPro60"
+            VALUE "LegalCopyright", "Copyright (C) 2003"
+            VALUE "OriginalFilename", "SSPro60.EXE"
+            VALUE "ProductName", "SSPro60 Application"
+            VALUE "ProductVersion", "2, 1, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_SSPRO60_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 281
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SSPRO60_DIALOG DLGINIT
+BEGIN
+    IDC_EXP_COMBO, 0x403, 3, 0
+0x524f, "\000" 
+    IDC_EXP_COMBO, 0x403, 5, 0
+0x4854, 0x4e45, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SSPRO60_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About SSPro60..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SSPro60.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
